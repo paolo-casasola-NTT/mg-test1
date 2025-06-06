@@ -1,0 +1,32 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: ./github/actions/checkout.yml
+
+      - name: Prepare
+        uses: ./github/actions/prepare.yml
+
+      - name: Compile
+        uses: ./github/actions/compile.yml
+
+      - name: Test
+        uses: ./github/actions/test.yml
+
+      - name: Package
+        uses: ./github/actions/package.yml
+
+      - name: Publish
+        uses: ./github/actions/publish.yml
+
+      - name: Cleanup
+        uses: ./github/actions/cleanup.yml

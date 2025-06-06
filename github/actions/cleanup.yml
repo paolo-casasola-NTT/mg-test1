@@ -1,0 +1,7 @@
+name: Cleanup Action
+description: Cleanup after the job
+runs:
+  using: "composite"
+  steps:
+    - name: Cleanup
+      run: echo "doing some cleanup..."

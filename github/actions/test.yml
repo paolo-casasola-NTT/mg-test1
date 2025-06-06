@@ -1,0 +1,7 @@
+name: Test Action
+description: Run tests
+runs:
+  using: "composite"
+  steps:
+    - name: Run tests
+      run: ./test_hello.sh
