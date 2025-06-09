@@ -1,0 +1,7 @@
+name: Prepare Action
+description: "Prepare the workspace"
+runs:
+  using: "composite"
+  steps:
+    - name: Clean workspace
+      run: git clean -fdx

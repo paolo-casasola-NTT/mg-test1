@@ -1,0 +1,7 @@
+name: Compile Action
+description: "Compile the application"
+runs:
+  using: "composite"
+  steps:
+    - name: Compile
+      run: echo "nothing to compile for hello.sh..."
